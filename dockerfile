@@ -1,4 +1,4 @@
-FROM maven:3.5-jdk-8 as BUILD
+FROM maven:3.8.1-jdk-8 as BUILD
 COPY . /usr/src/
 RUN mvn -f /usr/src/pom.xml clean package
 
