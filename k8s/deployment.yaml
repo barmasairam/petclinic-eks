@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: petclinic
+  name: petclinic-eks
   namespace: petclinic
 spec:
   selector:
@@ -11,10 +11,10 @@ spec:
   template:
     metadata:
       labels:
-        app: petclinic
+        app: petclinic-eks
     spec:
       containers:
-      - name: petclinic
+      - name: petclinic-eks
         image: 275630824768.dkr.ecr.us-east-2.amazonaws.com/petclinic-eks:number
         ports:
         - containerPort: 8080
